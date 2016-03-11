@@ -1,0 +1,20 @@
+{
+  "name": "SoberStaff_UserInterface_webapp",
+  "version": "1.0.0",
+  "description": "basic relational database User Interface app for staff members of recovery house( made with express and nodejs)",
+  "main": "index.js",
+  "scripts": {
+    "test": "runme"
+  },
+  "keywords": [
+    "express",
+    "database",
+    "admin",
+    "users",
+    "classes",
+    "npm",
+    "pi",
+    "raspberry"
+  ],
+  "author": "eric phung"
+}
