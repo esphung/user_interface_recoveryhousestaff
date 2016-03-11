@@ -7,12 +7,13 @@
 </head>
 <body>
 
-  <h1><%= title %></h1>
+  <h2><%= title %></h2>
 
   <!-- Login page button -->
   <form action="/login" method="post" accept-charset="utf-8">
-    <input type="text" name="userNameInputValue" value="" placeholder="Username" autofocus>
-    <input type="PASSWORD" name="passwordInputValue" value="">
+    <input type="text" name="userNameInputValue" value="" placeholder="Username" autocomplete="off" autofocus>
+    <input type="PASSWORD" name="passwordInputValue" value="" autocomplete="off">
+    <input type="submit" name="submitBtn" value="Submit">
   </form>
 </body>
 </html>

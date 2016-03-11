@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var bodyParser = require('body-parser');
 var app = express();
 
 
@@ -24,6 +25,18 @@ const PORT=8000;
 // configure app ===========================================
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+
+
+
+// use middleware ============================================
+
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+
 
 
 // when client requests root page
@@ -56,6 +69,25 @@ app.get('/login', function (req, res) {
 })
 
 
+// client posts to login
+app.post('/login', function (req, res) {
+  var usernameValue = req.body.userNameInputValue;
+  console.log(usernameValue);
+  if (usernameValue == 'user') {
+    res.redirect('/user')
+  } else {
+    res.redirect('/home')
+  }
+})
+
+// when client requests user page
+app.get('/user',function (req,res) {
+  // if authenticated as user
+  res.render('userpageview',{
+    title : "User Page"
+
+  })
+})
 
 
 
